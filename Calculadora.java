@@ -42,6 +42,9 @@ public class Calculadora {
             case "/":
                 division();
                 break;
+            case "%":
+                modulo();
+                break;
             default:
                 System.out.println("Operación no válida");
         }
@@ -63,7 +66,17 @@ public class Calculadora {
         resultado = numero1 / numero2;
     }
 
+    private void modulo() {
+        if (numero2 == 0) {
+            System.out.println("No se puede calcular módulo con 0");
+            resultado = 0;
+        } else {
+            resultado = numero1 % numero2;
+        }
+    }
+
     public double getResultado() {
         return resultado;
     }
+    
 }
